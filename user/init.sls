@@ -2,7 +2,7 @@ user_MichalG:
   user.present:
     - name: michalG
     - fullname: MichalG
-    - shel: /bin/bash
+    - shell: /bin/bash
     - home: /home/michalg
 
 user_MichalG_key:
