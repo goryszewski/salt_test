@@ -5,7 +5,7 @@ set_timezone:
 install_nt_client:
   pkg.installed:
     - name: ntp
-  service.restart:
+  systemd_service.restart:
     - name: ntp
 
 
