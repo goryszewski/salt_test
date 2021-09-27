@@ -9,4 +9,4 @@ user_MichalG_key:
   ssh_auth.present:
     - name: michalG
     - user: michalG
-    - source: salt://user/public.michal.pub
+    - source: salt://user/public/michal.pub
