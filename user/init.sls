@@ -1,12 +1,12 @@
-user_MichalG:
-  user.present:
-    - name: michalG
-    - fullname: MichalG
-    - shell: /bin/bash
-    - home: /home/michalg
 
-user_MichalG_key:
+{% for user,data in piller.get('admin_users',{}).items() %}
+user_{{user}}:
+  user.present:
+    - name: {{data['name']}}
+    - fullname: {{data['fullname']}}
+    - shell: {{data['shell']}}
+    - home: {{data['home']}}
+user_{{user}}key:
   ssh_auth.present:
-    - name: michalG
-    - user: michalG
-    - source: salt://user/public/michal.pub
+    - name: {{data['ssk_key']}}
+    - user: {{data['name']}}
